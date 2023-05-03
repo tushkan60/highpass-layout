@@ -1,0 +1,23 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "TTFirsNeue", "Roboto", "Open Sans", sans-serif;
+  --content-width: 1290px;
+  --container-offset: 30px;
+  --container-offset-mobile: 21px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --dark-color: #202020;
+  --btn-color: #FF6E30;
+  --text-gray: #CACACA;
+  --input-bg: #4A4A4A;
+  --gray-color: #999999;
+  --form-color: #E9E9E9;
+  --focus-color: #BC572B;
+  --hover-color: #FF6E30;
+  --active-color: #CE4307;
+  --error-color: #F06666;
+}

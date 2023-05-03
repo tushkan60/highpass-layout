@@ -1,0 +1,131 @@
+.footer {
+  background-color: var(--dark-color);
+
+  &__container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      padding-top: 31px;
+      padding-bottom: 8px;
+
+    }
+  }
+
+  &__logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 177px;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--form-color);
+
+    @include tablet {
+      margin-right: 104px;
+    }
+
+    @include mobile {
+      z-index: 1;
+      margin-right: 0;
+      align-items: center;
+      padding-top: 10px;
+      font-size: 10px;
+      line-height: 13px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        background-color: var(--input-bg);
+        left: -100%;
+        top: -16px;
+        right: -100%;
+        bottom: -100%;
+
+        @include mobile {
+          top: -2px;
+        }
+      }
+    }
+
+    .logo__img {
+      width: 190px;
+      margin-bottom: 10px;
+
+      @include tablet {
+        width: 168px;
+      }
+
+      @include mobile {
+        width: 111px;
+      }
+    }
+  }
+
+  &__copy {
+    margin-right: auto;
+    width: 361px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--text-gray);
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .social__title {
+      margin-bottom: 8px;
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--text-gray);
+    }
+
+    .social__list {
+      display: flex;
+      justify-content: space-between;
+      width: 80px;
+
+      .social__link {
+        outline: none;
+
+        &:focus {
+          .social__svg {
+            fill: var(--focus-color);
+          }
+        }
+
+        &:hover {
+          .social__svg {
+            fill: var(--hover-color);
+          }
+        }
+
+        &:active {
+          .social__svg {
+            fill: var(--active-color);
+          }
+        }
+
+        .social__svg {
+          fill: var(--text-gray);
+          transition: fill 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,239 @@
+.projects {
+
+  &__container {
+    padding-top: 70px;
+    padding-bottom: 0;
+    grid-template-rows: 10px auto auto;
+    grid-template-areas:
+      "title title title title title title title title title title title title"
+      "one one two two three three four four four four four four"
+      "five five five five five five six six six seven seven seven";
+
+    @include tablet {
+      grid-template-rows: 15px auto auto auto;
+      gap: 24px 30px;
+      grid-template-areas:
+        "title title title title title title title title"
+        "one one two two three three three three"
+        "four four four four four six six six"
+        "seven seven seven five five five five five";
+    }
+
+    @include small-tablet {
+      padding-top: 72px;
+      grid-template-rows: 12px auto auto auto auto;
+      gap: 28px 30px;
+      grid-template-areas:
+        "title title title title title title"
+        "one one two two three three"
+        "four four four four four four"
+        "six six six seven seven seven"
+        "five five five five five five";
+    }
+
+    @include mobile {
+      padding-top: 50px;
+      gap: 25px 30px;
+      grid-template-rows: 10px auto auto auto auto auto auto auto;
+      grid-template-areas:
+        "title title"
+        "one one"
+        "two two"
+        "three three"
+        "four four"
+        "six six"
+        "seven seven"
+        "five five";
+    }
+
+    .projects__title {
+      grid-area: title;
+    }
+
+    .projects__one {
+      grid-area: one;
+    }
+
+    .projects__two {
+      grid-area: two;
+    }
+
+    .projects__three {
+      grid-area: three;
+    }
+
+    .projects__four {
+      grid-area: four;
+    }
+
+    .projects__five {
+      grid-area: five;
+    }
+
+    .projects__six {
+      grid-area: six;
+    }
+
+    .projects__seven {
+      grid-area: seven;
+    }
+
+    .projects__small {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      position: relative;
+
+      @include small-tablet {
+        min-height: 300px;
+      }
+
+      @include mobile {
+        min-height: 278px;
+      }
+
+      .small__picture {
+        width: 100%;
+
+        .small__img {
+          margin-bottom: 14px;
+          width: 100%;
+        }
+      }
+
+      .small__title {
+        margin-bottom: auto;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        overflow: hidden;
+        color: var(--dark-color);
+
+        @include mobile {
+          margin-bottom: 8px;
+        }
+      }
+
+      .small__date {
+        background-image: url(../img/calendar-g.svg);
+        background-repeat: no-repeat;
+        padding-left: 18px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        color: var(--gray-color);
+      }
+
+      .small__tag {
+        right: 7px;
+        top: 7px;
+
+        @include mobile {
+          padding: 4px 14px;
+        }
+      }
+    }
+
+    .projects__big {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      position: relative;
+      min-height: 300px;
+      padding: 22px 30px 30px;
+
+      @include tablet {
+        min-height: 307px;
+        padding: 33px 30px 30px;
+      }
+
+      @include small-tablet {
+        min-height: 300px;
+        padding: 31px 26px 30px;
+      }
+
+      @include mobile {
+        min-height: 422px;
+        padding: 196px 40px 30px 29px;
+      }
+
+      .big__date {
+        background-image: url(../img/calendar-w.svg);
+        background-repeat: no-repeat;
+        padding-left: 18px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        color: var(--light-color);
+
+        @include mobile {
+          margin-bottom: 6px;
+        }
+      }
+
+      .big__title {
+        width: 50%;
+        margin-bottom: 6px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        color: var(--light-color);
+
+        @include mobile {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+
+      .big__text {
+        width: 65%;
+        margin-bottom: auto;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--light-color);
+
+        @include tablet {
+          width: 55%;
+        }
+
+        @include mobile {
+          width: 100%;
+          margin-bottom: 16px;
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+      }
+
+      .big__tag {
+        right: 7px;
+        top: 7px;
+
+        @include mobile {
+          padding: 4px 14px;
+        }
+      }
+
+      .big__picture {
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+
+        .big__img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
